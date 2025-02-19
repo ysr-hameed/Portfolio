@@ -3,8 +3,8 @@
     --secondary: #818cf8;
     --success: #10b981;
     --surface: #ffffff;
-    --text-primary: #1f2937;
-    --text-muted: #6b7280;
+    --text-primary: #111827;
+    --text-muted: #4b5563;
 }
 
 body {
@@ -58,6 +58,11 @@ body {
     padding: 1.25rem 1rem;
     font-size: 1.1rem;
     background: var(--surface);
+    color: var(--text-primary);
+}
+
+.url-input-container .form-control::placeholder {
+    color: var(--text-muted);
 }
 
 .url-input-container .form-control:focus {
@@ -105,6 +110,11 @@ body {
     border-radius: 2rem;
     padding: 3rem;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    color: var(--text-primary);
+}
+
+.calculator-widget h5 {
+    color: var(--text-primary);
 }
 
 .earnings-shapes {
@@ -156,6 +166,7 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1rem 1rem 1rem 3rem;
     font-size: 1.1rem;
+    color: var(--text-primary);
 }
 
 .newsletter-form .input-icon {
@@ -166,25 +177,28 @@ body {
     z-index: 4;
 }
 
-/* Badges */
-.badge {
-    padding: 0.75rem 1.5rem;
+/* Typography */
+.lead {
+    color: var(--text-muted);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
     font-weight: 600;
-    border-radius: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-size: 0.75rem;
 }
 
-/* Animations */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+.text-muted {
+    color: var(--text-muted) !important;
 }
 
-.text-pulse {
-    animation: pulse 0.5s ease-in-out;
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #4338ca;
 }
 
 /* Media Queries */
@@ -212,15 +226,18 @@ body {
     }
 }
 
-/*These styles were present in the original and are not explicitly redefined in the edited snippet.  Adding them back for completeness.*/
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-    border-radius: 1rem;
+/* Other Components */
+.badge {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.75rem;
 }
 
 .toast {
-    background: #ffffff;
+    background: var(--surface);
     border-radius: 1rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
@@ -229,6 +246,12 @@ body {
     position: relative;
     pointer-events: none;
     opacity: 0.7;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
 }
 
 .form-control {
@@ -319,4 +342,14 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.text-pulse {
+    animation: pulse 0.5s ease-in-out;
 }
