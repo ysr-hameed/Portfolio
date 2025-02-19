@@ -25,24 +25,65 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.querySelector('.url-shortener-form button').addEventListener('click', function() {
     const input = document.querySelector('.url-shortener-form input');
     const url = input.value.trim();
-    
+    const loadingSkeleton = document.querySelector('.loading-skeleton');
+    const successResult = document.querySelector('.success-result');
+
     if (!url) {
         showToast('Please enter a URL', 'error');
         return;
     }
-    
+
     if (!isValidURL(url)) {
         showToast('Please enter a valid URL', 'error');
         return;
     }
-    
-    // Mock URL shortening
-    this.classList.add('loading');
+
+    // Hide any existing results
+    successResult.classList.add('d-none');
+
+    // Show loading skeleton
+    loadingSkeleton.classList.remove('d-none');
+
+    // Mock URL shortening with delay
     setTimeout(() => {
-        this.classList.remove('loading');
-        input.value = 'https://urlprofit.co/abc123';
+        // Hide loading skeleton
+        loadingSkeleton.classList.add('d-none');
+
+        // Show success result
+        successResult.classList.remove('d-none');
+
+        // Clear input
+        input.value = '';
+
+        // Initialize tooltips
+        const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        tooltips.forEach(tooltip => new bootstrap.Tooltip(tooltip));
+
         showToast('URL shortened successfully!', 'success');
     }, 1500);
+});
+
+// Copy URL functionality
+document.querySelector('.copy-btn').addEventListener('click', async function() {
+    const url = document.querySelector('.shortened-url').textContent.trim();
+    try {
+        await navigator.clipboard.writeText(url);
+
+        // Visual feedback
+        this.classList.add('copied');
+        const icon = this.querySelector('i');
+        icon.className = 'fas fa-check';
+
+        showToast('URL copied to clipboard!', 'success');
+
+        // Reset button after 2 seconds
+        setTimeout(() => {
+            this.classList.remove('copied');
+            icon.className = 'fas fa-copy';
+        }, 2000);
+    } catch (err) {
+        showToast('Failed to copy URL', 'error');
+    }
 });
 
 // Newsletter Form Handler

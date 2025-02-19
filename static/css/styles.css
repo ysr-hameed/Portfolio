@@ -21,6 +21,11 @@ body {
 }
 
 /* Hero Section */
+.hero-section { /*Updated*/
+    min-height: auto;
+    padding: 6rem 0;
+}
+
 #hero {
     background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
 }
@@ -352,4 +357,48 @@ h1, h2, h3, h4, h5, h6 {
 
 .text-pulse {
     animation: pulse 0.5s ease-in-out;
+}
+
+/* Add these styles for loading skeleton and result container */
+.loading-skeleton {
+    background: var(--surface);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skeleton-line {
+    height: 24px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+.skeleton-line:last-child {
+    margin-bottom: 0;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.url-result .result-container {
+    transition: all 0.3s ease;
+}
+
+.shortened-url {
+    font-weight: 500;
+    font-size: 1.1rem;
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.copy-btn.copied {
+    background-color: var(--success);
+    color: white;
 }
