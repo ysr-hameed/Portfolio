@@ -1,12 +1,205 @@
 :root {
-    --navbar-height: 72px;
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --secondary: #7c3aed;
+    --success: #10b981;
+    --surface: #ffffff;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --border-color: rgba(0, 0, 0, 0.08);
 }
 
 body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    color: #2d3748;
-    background-color: #ffffff;
+    color: var(--text-primary);
+    background-color: var(--surface);
+    line-height: 1.6;
     padding-top: var(--navbar-height);
+}
+
+/* Section Spacing */
+.py-6 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* Typography */
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+/* URL Shortener Form */
+.url-input-container {
+    position: relative;
+    background: var(--surface);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.input-icon {
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    margin-left: 1rem;
+}
+
+.url-input-container .form-control {
+    border: none;
+    padding: 1.25rem 1rem;
+    font-size: 1.1rem;
+    background: transparent;
+}
+
+.url-input-container .form-control:focus {
+    box-shadow: none;
+}
+
+.shorten-btn {
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shorten-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+}
+
+/* Feature Cards */
+.feature-card {
+    background: var(--surface);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+}
+
+/* Calculator Section */
+.bg-gradient {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+.calculator-widget {
+    background: var(--surface);
+    border-radius: 2rem;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.custom-range {
+    height: 8px;
+    border-radius: 4px;
+    background: #e2e8f0;
+}
+
+.custom-range::-webkit-slider-thumb {
+    width: 24px;
+    height: 24px;
+    background: var(--primary);
+    border: 3px solid var(--surface);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.custom-range::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+}
+
+/* Newsletter Form */
+.newsletter-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form .input-group {
+    background: var(--surface);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.newsletter-form .form-control {
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.newsletter-form .btn {
+    border-radius: 0.75rem;
+    padding: 1rem 2rem;
+    font-weight: 600;
+}
+
+/* Badges */
+.badge {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.75rem;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.text-pulse {
+    animation: pulse 0.5s ease-in-out;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .url-input-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .shorten-btn {
+        width: 100%;
+    }
+
+    .calculator-widget {
+        padding: 2rem;
+    }
+
+    .py-6 {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
 }
 
 /* Navbar Styles */
@@ -16,18 +209,13 @@ body {
     background-color: rgba(33, 37, 41, 0.9);
 }
 
-/* Hero Section */
-#hero {
-    background: linear-gradient(135deg, #f6f9fc 0%, #ffffff 100%);
-    padding: 6rem 0;
-}
-
 /* Feature Icons */
 .feature-icon {
     width: 48px;
     height: 48px;
     color: #4f46e5;
 }
+
 
 /* Cards */
 .feature-card {
@@ -42,29 +230,6 @@ body {
 .feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-}
-
-/* Calculator Widget */
-.calculator-widget {
-    background: #ffffff;
-    border-radius: 1.5rem;
-    padding: 2.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.custom-range {
-    height: 6px;
-    border-radius: 3px;
-    background: #e2e8f0;
-}
-
-.custom-range::-webkit-slider-thumb {
-    width: 20px;
-    height: 20px;
-    background: #4f46e5;
-    border: 3px solid #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
 }
 
 /* Pricing Cards */
@@ -120,14 +285,6 @@ body {
     box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
 }
 
-/* Text Styles */
-.text-gradient {
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
 /* Form Elements */
 .form-control {
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -140,16 +297,6 @@ body {
     box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
 }
 
-/* Animations */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-.text-pulse {
-    animation: pulse 0.5s ease-in-out;
-}
 
 /* Toast Notifications */
 .toast {
@@ -165,30 +312,9 @@ body {
     opacity: 0.7;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .pricing-card.premium {
-        transform: none;
-    }
-
-    #hero {
-        padding: 4rem 0;
-    }
-
-    .calculator-widget {
-        padding: 1.5rem;
-    }
-}
-
 /* Responsive Images */
 .img-fluid {
     max-width: 100%;
     height: auto;
     border-radius: 1rem;
-}
-
-/* Newsletter Form */
-.newsletter-form {
-    max-width: 500px;
-    margin: 0 auto;
 }

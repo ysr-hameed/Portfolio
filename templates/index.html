@@ -6,22 +6,27 @@
     <title>URLProfit - URL Shortener with Earnings</title>
     <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="/static/css/styles.css" rel="stylesheet">
 </head>
 <body>
     <!-- Hero Section -->
-    <section id="hero" class="min-vh-75 d-flex align-items-center">
+    <section id="hero" class="min-vh-100 d-flex align-items-center">
         <div class="container">
             <div class="row justify-content-center text-center">
-                <div class="col-lg-8" data-aos="fade-up">
-                    <h1 class="display-4 fw-bold mb-4">Shorten URLs, Maximize Earnings</h1>
-                    <p class="lead mb-4">Transform your long URLs into profitable short links. Earn money with every click while providing a better experience for your audience.</p>
+                <div class="col-lg-9" data-aos="fade-up">
+                    <h1 class="display-3 fw-bold mb-4 text-gradient">Transform Long URLs into Profit</h1>
+                    <p class="lead mb-5 text-muted">Create short, memorable links and earn up to $20 per 1,000 clicks. Join thousands of successful URL shorteners today.</p>
                     <div class="url-shortener-form">
-                        <div class="input-group mb-3 shadow-lg">
-                            <input type="url" class="form-control form-control-lg rounded-start-pill" placeholder="Paste your long URL here">
-                            <button class="btn btn-gradient rounded-end-pill px-4" type="button">Shorten & Earn</button>
+                        <div class="url-input-container">
+                            <i class="fas fa-link input-icon"></i>
+                            <input type="url" class="form-control form-control-lg" placeholder="Paste your long URL here...">
+                            <button class="btn btn-primary btn-lg shorten-btn">
+                                <i class="fas fa-bolt me-2"></i>Shorten & Earn
+                            </button>
                         </div>
+                        <p class="text-muted mt-3"><i class="fas fa-shield-alt me-2"></i>Your links are secure and Analytics-enabled</p>
                     </div>
                 </div>
             </div>
@@ -29,92 +34,61 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-5 bg-light">
+    <section id="features" class="py-6">
         <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">Why Choose URLProfit?</h2>
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-7 text-center">
+                    <span class="badge bg-primary-subtle text-primary mb-3">Why Choose URLProfit</span>
+                    <h2 class="display-5 fw-bold mb-4">Everything You Need to Succeed</h2>
+                </div>
+            </div>
             <div class="row g-4">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-card">
-                        <i data-feather="link" class="feature-icon mb-3"></i>
-                        <h5>Smart URL Shortening</h5>
-                        <p>Create memorable, branded short links that drive more clicks and increase your earnings.</p>
+                        <i class="fas fa-wand-magic-sparkles feature-icon"></i>
+                        <h4 class="mt-4 mb-3">Smart Shortening</h4>
+                        <p class="text-muted">Create branded links that drive more clicks and boost your earnings potential.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-card">
-                        <i data-feather="trending-up" class="feature-icon mb-3"></i>
-                        <h5>Real-time Analytics</h5>
-                        <p>Track your links' performance and earnings with detailed analytics and insights.</p>
+                        <i class="fas fa-chart-line feature-icon"></i>
+                        <h4 class="mt-4 mb-3">Real-time Stats</h4>
+                        <p class="text-muted">Track performance with detailed analytics and optimize your strategies.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-card">
-                        <i data-feather="dollar-sign" class="feature-icon mb-3"></i>
-                        <h5>Competitive Payouts</h5>
-                        <p>Earn up to $20 per 1,000 clicks with our tiered payout system and bonus opportunities.</p>
+                        <i class="fas fa-coins feature-icon"></i>
+                        <h4 class="mt-4 mb-3">Premium Payouts</h4>
+                        <p class="text-muted">Earn more with our tiered system offering up to $20 per 1,000 clicks.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Earnings Calculator Section -->
-    <section id="earnings" class="py-5">
+    <!-- Earnings Calculator -->
+    <section id="earnings" class="py-6 bg-gradient">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center" data-aos="fade-up">
-                    <h2 class="mb-4">Calculate Your Potential Earnings</h2>
-                    <div class="calculator-widget shadow-lg">
+                    <span class="badge bg-white text-primary mb-3">Earnings Calculator</span>
+                    <h2 class="display-5 fw-bold mb-5 text-white">See How Much You Can Earn</h2>
+                    <div class="calculator-widget">
                         <div class="mb-4">
-                            <label class="form-label">Expected Monthly Clicks</label>
+                            <h5 class="mb-3">Monthly Click Estimation</h5>
                             <input type="range" class="form-range custom-range" id="clicksRange" min="1000" max="100000" step="1000">
-                            <div class="d-flex justify-content-between">
-                                <span>1K</span>
-                                <span id="clicksValue">50K</span>
-                                <span>100K</span>
+                            <div class="d-flex justify-content-between mt-2">
+                                <span class="text-muted">1K</span>
+                                <span id="clicksValue" class="fw-bold">50K</span>
+                                <span class="text-muted">100K</span>
                             </div>
                         </div>
                         <div class="earnings-display">
-                            <h3 class="mb-2">Estimated Monthly Earnings</h3>
-                            <div class="display-4 text-gradient" id="earningsValue">$1,000</div>
+                            <p class="text-muted mb-2">Your Estimated Monthly Earnings</p>
+                            <div class="display-4 fw-bold text-gradient mb-0" id="earningsValue">$1,000</div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">Choose Your Plan</h2>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <h5>Starter</h5>
-                            <h6 class="price">Free</h6>
-                        </div>
-                        <ul class="list-unstyled">
-                            <li><i data-feather="check" class="text-success"></i> Up to 1000 links/month</li>
-                            <li><i data-feather="check" class="text-success"></i> Basic Analytics</li>
-                            <li><i data-feather="check" class="text-success"></i> $5 per 1000 clicks</li>
-                        </ul>
-                        <button class="btn btn-outline-primary btn-lg w-100 rounded-pill">Get Started</button>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="pricing-card premium">
-                        <div class="pricing-header">
-                            <h5>Pro</h5>
-                            <h6 class="price">$29/month</h6>
-                        </div>
-                        <ul class="list-unstyled">
-                            <li><i data-feather="check" class="text-success"></i> Unlimited links</li>
-                            <li><i data-feather="check" class="text-success"></i> Advanced Analytics</li>
-                            <li><i data-feather="check" class="text-success"></i> $10 per 1000 clicks</li>
-                        </ul>
-                        <button class="btn btn-gradient btn-lg w-100 rounded-pill">Choose Pro</button>
                     </div>
                 </div>
             </div>
@@ -122,16 +96,20 @@
     </section>
 
     <!-- Newsletter Section -->
-    <section id="newsletter" class="py-5">
+    <section id="newsletter" class="py-6">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center" data-aos="fade-up">
-                    <h2 class="mb-4">Stay Updated</h2>
-                    <p class="mb-4">Subscribe to our newsletter for the latest updates and earning opportunities.</p>
+                    <span class="badge bg-primary-subtle text-primary mb-3">Stay Updated</span>
+                    <h2 class="fw-bold mb-4">Get Latest Updates</h2>
+                    <p class="text-muted mb-4">Join our newsletter for earning tips and platform updates.</p>
                     <form class="newsletter-form">
-                        <div class="input-group shadow">
-                            <input type="email" class="form-control form-control-lg rounded-start-pill" placeholder="Enter your email">
-                            <button class="btn btn-gradient rounded-end-pill px-4" type="submit">Subscribe</button>
+                        <div class="input-group">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" class="form-control form-control-lg" placeholder="Enter your email">
+                            <button class="btn btn-primary btn-lg" type="submit">
+                                <i class="fas fa-paper-plane me-2"></i>Subscribe
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -139,15 +117,14 @@
         </div>
     </section>
 
-    <footer class="py-4 bg-light text-center">
-        <div class="container">
-            <p class="mb-0">&copy; 2024 URLProfit. All rights reserved.</p>
+    <footer class="py-4 bg-light">
+        <div class="container text-center">
+            <p class="mb-0 text-muted">© 2024 URLProfit. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="/static/js/calculator.js"></script>
     <script src="/static/js/main.js"></script>
 </body>
