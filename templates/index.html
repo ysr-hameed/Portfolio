@@ -7,7 +7,7 @@
     <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="/static/css/styles.css" rel="stylesheet">
 </head>
 <body>
@@ -17,18 +17,18 @@
         <div class="container position-relative">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-9" data-aos="fade-up">
-                    <span class="badge bg-white text-primary mb-4">URL Shortener with Earnings</span>
-                    <h1 class="display-3 fw-bold mb-4 text-white">Transform Long URLs into <span class="text-warning">Profit</span></h1>
-                    <p class="lead mb-5 text-white-50">Create short, memorable links and earn up to $20 per 1,000 clicks. Join thousands of successful URL shorteners today.</p>
+                    <span class="badge bg-primary text-white mb-4">URL Shortener with Earnings</span>
+                    <h1 class="display-3 fw-bold mb-4">Transform Long URLs into <span class="text-primary">Profit</span></h1>
+                    <p class="lead mb-5 text-muted">Create short, memorable links and earn up to $20 per 1,000 clicks. Join thousands of successful URL shorteners today.</p>
                     <div class="url-shortener-form">
-                        <div class="url-input-container glass-effect">
+                        <div class="url-input-container">
                             <i class="fas fa-link input-icon"></i>
                             <input type="url" class="form-control form-control-lg" placeholder="Paste your long URL here...">
-                            <button class="btn btn-warning btn-lg shorten-btn">
+                            <button class="btn btn-primary btn-lg shorten-btn">
                                 <i class="fas fa-bolt me-2"></i>Shorten & Earn
                             </button>
                         </div>
-                        <p class="text-white-50 mt-3"><i class="fas fa-shield-alt me-2"></i>Your links are secure and Analytics-enabled</p>
+                        <p class="text-muted mt-3"><i class="fas fa-shield-alt me-2"></i>Your links are secure and Analytics-enabled</p>
                     </div>
                 </div>
             </div>
@@ -36,34 +36,34 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-6 bg-gradient-purple">
+    <section id="features" class="py-6 bg-light">
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-7 text-center">
-                    <h2 class="display-5 fw-bold mb-4 text-white">Why Choose URLProfit?</h2>
-                    <p class="lead text-white-50">Everything you need to succeed in link monetization</p>
+                    <h2 class="display-5 fw-bold mb-4">Why Choose URLProfit?</h2>
+                    <p class="lead text-muted">Everything you need to succeed in link monetization</p>
                 </div>
             </div>
             <div class="row g-4">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-block glass-effect">
+                    <div class="feature-block">
                         <i class="fas fa-wand-magic-sparkles feature-icon"></i>
-                        <h4 class="text-white mt-4 mb-3">Smart Shortening</h4>
-                        <p class="text-white-50">Create branded links that drive more clicks and boost your earnings potential.</p>
+                        <h4 class="mt-4 mb-3">Smart Shortening</h4>
+                        <p class="text-muted">Create branded links that drive more clicks and boost your earnings potential.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-block glass-effect">
+                    <div class="feature-block">
                         <i class="fas fa-chart-line feature-icon"></i>
-                        <h4 class="text-white mt-4 mb-3">Real-time Stats</h4>
-                        <p class="text-white-50">Track performance with detailed analytics and optimize your strategies.</p>
+                        <h4 class="mt-4 mb-3">Real-time Stats</h4>
+                        <p class="text-muted">Track performance with detailed analytics and optimize your strategies.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-block glass-effect">
+                    <div class="feature-block">
                         <i class="fas fa-coins feature-icon"></i>
-                        <h4 class="text-white mt-4 mb-3">Premium Payouts</h4>
-                        <p class="text-white-50">Earn more with our tiered system offering up to $20 per 1,000 clicks.</p>
+                        <h4 class="mt-4 mb-3">Premium Payouts</h4>
+                        <p class="text-muted">Earn more with our tiered system offering up to $20 per 1,000 clicks.</p>
                     </div>
                 </div>
             </div>
@@ -71,25 +71,25 @@
     </section>
 
     <!-- Earnings Calculator -->
-    <section id="earnings" class="py-6 bg-gradient-dark position-relative overflow-hidden">
+    <section id="earnings" class="py-6 bg-primary position-relative overflow-hidden">
         <div class="earnings-shapes"></div>
         <div class="container position-relative">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center" data-aos="fade-up">
                     <h2 class="display-5 fw-bold mb-5 text-white">Calculate Your Earnings</h2>
-                    <div class="calculator-widget glass-effect">
+                    <div class="calculator-widget">
                         <div class="mb-4">
-                            <h5 class="text-white mb-3">Monthly Click Estimation</h5>
+                            <h5 class="mb-3">Monthly Click Estimation</h5>
                             <input type="range" class="form-range custom-range" id="clicksRange" min="1000" max="100000" step="1000">
                             <div class="d-flex justify-content-between mt-2">
-                                <span class="text-white-50">1K</span>
-                                <span class="text-warning fw-bold" id="clicksValue">50K</span>
-                                <span class="text-white-50">100K</span>
+                                <span class="text-muted">1K</span>
+                                <span class="fw-bold text-primary" id="clicksValue">50K</span>
+                                <span class="text-muted">100K</span>
                             </div>
                         </div>
                         <div class="earnings-display">
-                            <p class="text-white-50 mb-2">Your Estimated Monthly Earnings</p>
-                            <div class="display-4 fw-bold text-warning mb-0" id="earningsValue">$1,000</div>
+                            <p class="text-muted mb-2">Your Estimated Monthly Earnings</p>
+                            <div class="display-4 fw-bold text-primary mb-0" id="earningsValue">$1,000</div>
                         </div>
                     </div>
                 </div>
@@ -98,21 +98,19 @@
     </section>
 
     <!-- Newsletter Section -->
-    <section id="newsletter" class="py-6 bg-gradient-purple">
+    <section id="newsletter" class="py-6 bg-light">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center" data-aos="fade-up">
-                    <h2 class="fw-bold mb-4 text-white">Get Latest Updates</h2>
-                    <p class="text-white-50 mb-4">Join our newsletter for earning tips and platform updates.</p>
+                    <h2 class="fw-bold mb-4">Get Latest Updates</h2>
+                    <p class="text-muted mb-4">Join our newsletter for earning tips and platform updates.</p>
                     <form class="newsletter-form">
-                        <div class="glass-effect p-2">
-                            <div class="input-group">
-                                <i class="fas fa-envelope input-icon"></i>
-                                <input type="email" class="form-control form-control-lg bg-transparent text-white" placeholder="Enter your email">
-                                <button class="btn btn-warning btn-lg px-4" type="submit">
-                                    <i class="fas fa-paper-plane me-2"></i>Subscribe
-                                </button>
-                            </div>
+                        <div class="input-group">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" class="form-control form-control-lg" placeholder="Enter your email">
+                            <button class="btn btn-primary btn-lg px-4" type="submit">
+                                <i class="fas fa-paper-plane me-2"></i>Subscribe
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -120,9 +118,9 @@
         </div>
     </section>
 
-    <footer class="py-4 bg-dark">
+    <footer class="py-4 bg-light">
         <div class="container text-center">
-            <p class="mb-0 text-white-50">© 2024 URLProfit. All rights reserved.</p>
+            <p class="mb-0 text-muted">© 2024 URLProfit. All rights reserved.</p>
         </div>
     </footer>
 
