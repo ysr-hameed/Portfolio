@@ -21,7 +21,7 @@ body {
 }
 
 /* Hero Section */
-.hero-section { /*Updated*/
+.hero-section { 
     min-height: auto;
     padding: 6rem 0;
 }
@@ -359,7 +359,7 @@ h1, h2, h3, h4, h5, h6 {
     animation: pulse 0.5s ease-in-out;
 }
 
-/* Add these styles for loading skeleton and result container */
+/* Loading States */
 .loading-skeleton {
     background: var(--surface);
     border-radius: 1rem;
@@ -383,6 +383,19 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes loading {
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
+}
+
+.shorten-btn.loading {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.shorten-btn.loading .default-text {
+    display: none;
+}
+
+.shorten-btn.loading .loading-text {
+    display: inline-block !important;
 }
 
 .url-result .result-container {

@@ -41,12 +41,14 @@ document.querySelector('.url-shortener-form button').addEventListener('click', f
     // Hide any existing results
     successResult.classList.add('d-none');
 
-    // Show loading skeleton
+    // Show loading states
+    this.classList.add('loading');
     loadingSkeleton.classList.remove('d-none');
 
     // Mock URL shortening with delay
     setTimeout(() => {
-        // Hide loading skeleton
+        // Hide loading states
+        this.classList.remove('loading');
         loadingSkeleton.classList.add('d-none');
 
         // Show success result
