@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+<nav>
+  <div class="logo">
+    <i class="fa-regular fa-circle-dot"></i>
+  </div>
+  <ul class="nav-links">
+    <li class="close-menu" onclick="toggleNav()"><i class="fas fa-times"></i></li>
+  <li class="close-menu" onclick="toggleNav()"><i class="fas fa-times"></i></li>
+  <li><a href="#home" onclick="toggleNav()"><i class="fas fa-home"></i> HOME</a></li>
+  <li><a href="#work" onclick="toggleNav()"><i class="fas fa-briefcase"></i> WORK</a></li>
+  <li><a href="#about" onclick="toggleNav()"><i class="fas fa-user"></i> ABOUT</a></li>
+  <li><a href="#skills" onclick="toggleNav()"><i class="fas fa-cogs"></i> SKILLS</a></li>
+  <li><a href="#contact" onclick="toggleNav()"><i class="fas fa-envelope"></i> CONTACT</a></li>
+  </ul>
+  <div class="nav-buttons">
+    <button class="download-cv">Download CV</button>
+    <button class="theme-toggle" onclick="toggleTheme()">
+      <i class="fa-regular fa-moon"></i>
+    </button>
+  </div>
+  <div class="mobile-menu" onclick="toggleNav()">
+    <i class="fas fa-bars"></i>
+  </div>
+</nav>
+
+        <!-- Main Content -->
+        <main>
+            <div class="content-wrapper">
+<div class="text-content">
+  <h1 class="name">Yasir Hameed</h1>
+  <div class="bio-text">
+    <p>Full Stack Developer & UI/UX Designer</p>
+    <p class="description">
+      A passionate developer specializing in modern, high-performance web applications.
+      Skilled in HTML, CSS, JavaScript, Python, PHP, React.js, Firebase DB, Bootstrap, and UI/UX,
+      I create seamless, user-friendly experiences through clean and efficient code.
+    </p>
+  </div>
+  <div class="cta-buttons">
+    <button class="primary-btn">Contact Me</button>
+    <button class="secondary-btn">View Work</button>
+  </div>
+  <div class="hero-social-icon">
+   <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+ <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+ <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+ <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+ </div>
+</div>
+
+
+
+            </div>
+
+
+        </main>
+
+      <section class="skills-section">
+
+        <div class="skills-header">
+          <h1>My Skills</h1>
+          <p>Frontend & Full-stack Development Skills</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-icon">
+              <i class="fab fa-html5"></i>
+              <span>HTML</span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">
+              <i class="fab fa-css3-alt"></i>
+              <span>CSS</span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">
+              <i class="fab fa-js"></i>
+              <span>JavaScript</span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">
+              <i class="fab fa-python"></i>
+              <span>Python</span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">
+              <i class="fab fa-react"></i>
+              <span>React</span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">
+              <i class="fab fa-php"></i>
+              <span>PHP</span>
+            </div>
+          </div>
+                    <div class="skill-item">
+            <div class="skill-icon">
+              <i class="fab fa-bootstrap"></i>
+              <span>Bootstrap</span>
+            </div>
+          </div>
+        </div>
+
+     
+    </section>
+    
+    
+    
+    <section class="about-section">
+
+            <div class="about-header">
+                <h1>ABOUT ME</h1>
+            </div>
+
+            <div class="profile-section">
+<div class="typing-container">
+
+  <h2>I am a <span class="typing-text"></span></h2>
+  <p>I'm Yasir Hameed, a Full Stack Developer skilled in HTML, CSS, JavaScript, Python, PHP, React.js, Firebase, Bootstrap, and UI/UX. I build modern, responsive, and high-performing web applications. Passionate about problem-solving and innovation, I love creating seamless user experiences and collaborating on impactful projects. Let’s build something amazing!
+
+</p>
+            <div class="about-footer">
+              <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+</div>
+                <div class="profile-sidebar">
+                    <h2>My Progress</h2>
+                    <div class="progress-bars">
+                        <div class="progress-item">
+                            <div class="progress-info">
+                                <span>Frontend</span>
+                                <span class="percentage">90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-info">
+                                <span>Backend</span>
+                                <span class="percentage">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-info">
+                                <span>Design</span>
+                                <span class="percentage">75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        
+    </section>
+
+
+   
+   
+<!-- Projects Section -->
+<section class="projects-section">
+  <h2 class="section-title">My Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-image">
+        <img src="https://uicreative.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2019/11/23140644/website-template-design-projects.jpg" alt="Project 1">
+      </div>
+      <div class="project-info">
+        <h3>Project Name 1</h3>
+        <p>Short description of the project. This explains the key features or technologies used.</p>
+        <div class="project-tags">
+          <span><i class="fab fa-html5"></i>
+            HTML</span>
+          <span><i class="fab fa-css3-alt"></i> CSS</span>
+          <span><i class="fab fa-js"></i> JS</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+        </div>
+      </div>
+    </div>
+        <div class="project-card">
+      <div class="project-image">
+        <img src="https://uicreative.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2019/11/23140644/website-template-design-projects.jpg" alt="Project 1">
+      </div>
+      <div class="project-info">
+        <h3>Project Name 1</h3>
+        <p>Short description of the project. This explains the key features or technologies used.</p>
+        <div class="project-tags">
+          <span><i class="fab fa-html5"></i>
+            HTML</span>
+          <span><i class="fab fa-css3-alt"></i> CSS</span>
+          <span><i class="fab fa-js"></i> JS</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+        </div>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-image">
+        <img src="https://via.placeholder.com/300x200" alt="Project 2">
+      </div>
+      <div class="project-info">
+        <h3>Project Name 2</h3>
+        <p>Another project description. Highlight what makes this project unique or challenging.</p>
+        <div class="project-tags">
+          <span>React</span>
+          <span>Node.js</span>
+          <span>MongoDB</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+        </div>
+      </div>
+    </div>
+    <!-- Add more project cards as needed -->
+  </div>
+</section>
+
+
+<section class="contact-section">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact-container">
+
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <input type="text" id="name" name="name" required>
+                <label for="name">Your Name</label>
+                <div class="form-indicator"></div>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Your Email</label>
+                <div class="form-indicator"></div>
+            </div>
+            <div class="form-group">
+                <input type="text" id="subject" name="subject" required>
+                <label for="subject">Subject</label>
+                <div class="form-indicator"></div>
+            </div>
+            <div class="form-group">
+                <textarea id="message" name="message" required></textarea>
+                <label for="message">Your Message</label>
+                <div class="form-indicator"></div>
+            </div>
+            <button type="submit" class="submit-btn">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+            </button>
+        </form>
+    </div>
+</section>
+
+
+
+
+ 
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <p><i class="fas fa-envelope"></i> email@example.com</p>
+      <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+      <p><i class="fas fa-map-marker-alt"></i> City, Country</p>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Social Media</h4>
+      <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Your Name. All rights reserved.</p>
+  </div>
+</footer>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
